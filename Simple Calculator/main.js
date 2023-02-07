@@ -8,6 +8,7 @@ const action = ['-', '+', 'X', '/', '%'];
 
 
 const out = document.querySelector('.calc-screen p');
+const out2 = document.querySelector('.calc-screen p1');
 
 function clearAll () {
     a = '';
@@ -15,6 +16,7 @@ function clearAll () {
     sign = ''; 
     finish = false;
     out.textContent = 0;
+    out2.textContent = 0;
 }
 
 document.querySelector('.ac').onclick = clearAll;
@@ -86,7 +88,8 @@ document.querySelector('.buttons').onclick = (event) => {
     }
             
         finish = true;
-        out.textContent = a;
+        out.textContent = 0;
+        out2.textContent = a;
         console.table(a, b , sign);
     }
 
