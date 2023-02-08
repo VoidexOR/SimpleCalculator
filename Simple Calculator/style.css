@@ -1,3 +1,41 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+}
+
+.popup {
+    display: block;
+    width: 260px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10%;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -999px;
+    transition: .5s all linear;
+}
+#callback {
+    display: none;
+}
+
+#callback:checked~.popup {
+    top: 200px;
+}
 
 .calc {
     margin: auto;
@@ -20,12 +58,22 @@
     margin-bottom: 20px;
 }
 
+.calc-screen label {
+    width: 25px;
+    height: 25px;
+    background: url('history.png') no-repeat; 
+    background-size: 70% 70%;
+    background-position: center;
+}
 .calc-screen p {
     text-align: right;
     font-size: 4rem;
     margin: 0;
 }
 
+.calc-screen input {
+    text-align: left;
+}
 .buttons {
     display: grid;
     grid-template-areas: 
